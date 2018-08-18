@@ -3,4 +3,4 @@ const { giveItBackLater, addSomePromises, promiseToGiveItBackLater } = require('
 
 //giveItBackLater('Thiago')
 
-promiseToGiveItBackLater("thiago")
+addSomePromises("bar")
