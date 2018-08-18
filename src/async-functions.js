@@ -12,12 +12,6 @@ function addSomePromises(somePromise){
     .catch(rejected => rejected.repeat(3))
 }
     
-
- 
-       
- 
-
-
 function promiseToGiveItBackLater(value){
     return new Promise((resolve) => {
         const timer = () => {
