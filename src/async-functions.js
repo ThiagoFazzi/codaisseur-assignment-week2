@@ -7,11 +7,30 @@ function giveItBackLater(value, callback){
 
 
 function addSomePromises(somePromise){
-    somePromise
-    .then(resolved => resolved.repeat(2))
-    .catch(rejected => rejected.repeat(3))
-}
+    return somePromise
+    .then(function(resolve,reject){ 
+
+        if(resolve == 'foo'){
+            Promise.resolved('foofoo')
+        }else {
+            Promise.rejected('barbarbar')
+        }
+
+              
+    })
+    .catch(function(reason){ 
+        console.log(reason)
+
+ 
     
+    })
+}
+
+
+console.log(addSomePromises(Promise.resolve('foo')))
+addSomePromises(Promise.reject('bar'))
+
+
 function promiseToGiveItBackLater(value){
     return new Promise((resolve) => {
         const timer = () => {
